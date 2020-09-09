@@ -1,20 +1,14 @@
-
+from typedproperty import *
 class Stock():
-    __slots__ = ['name', '_shares', 'price']
-    def __init__(self, name, share, price):
+    
+    #__slots__ = ['name', '_shares', 'price']
+    name = String('name')
+    shares = Integer('shares')
+    price = Float('price')
+    def __init__(self, name, shares, price):
         self.name = name
-        self.shares = share
+        self.shares = shares
         self.price = price
-
-    @property    
-    def shares(self):
-        return self._shares
-
-    @shares.setter
-    def shares(self, shares):
-        if not isinstance(shares, int):
-            raise TypeError('Un expected value, int required')
-        self._shares = shares
 
     @property    
     def cost(self):
