@@ -1,4 +1,4 @@
-from typedproperty import *
+from .typedproperty import *
 class Stock():
     
     #__slots__ = ['name', '_shares', 'price']
